@@ -1,0 +1,21 @@
+You have a collection of products, each with a name and a short description. Your goal is to build a basic backend service that allows users to search for products based on the meaning of their query, rather than just keyword matching.
+
+Represent Product Descriptions: Implement a way to generate a numerical representation (embedding) for each product description. The goal is to capture the semantic meaning of the descriptions
+Create an API endpoint or function that takes a user's search query (a string) as input.
+Return a list of products ranked by their semantic similarity to the search query. Include the similarity score in the response.
+[
+{"id": 1, "name": "Wireless Noise-Canceling Headphones", "description": "Immerse yourself in pure audio with these comfortable and powerful headphones. Perfect for travel and focused work."},
+{"id": 2, "name": "Ergonomic Office Chair", "description": "Designed for all-day comfort and support, this chair helps improve posture and reduce back pain."},
+{"id": 3, "name": "Smart Coffee Maker with Voice Control", "description": "Start your day right with a freshly brewed cup of coffee, controlled by your voice or a mobile app."},
+{"id": 4, "name": "Lightweight Running Shoes", "description": "Engineered for speed and agility, these shoes provide excellent cushioning for your daily runs."},
+
+{"id": 5, "name": "Bamboo Cutting Board Set", "description": "A durable and eco-friendly set of cutting boards for all your food preparation needs."},
+{"id": 6, "name": "Portable Bluetooth Speaker", "description": "Enjoy your favorite music anywhere with this compact and water-resistant Bluetooth speaker."},
+]
+
+Example query - output
+query: "comfortable chair for working from home"
+output: "id": 2,
+    "name": "Ergonomic Office Chair",
+    "description": "Designed for all-day comfort and support, this chair helps improve posture and reduce back pain.",
+    "similarity_score": 0.85
